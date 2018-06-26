@@ -29,6 +29,8 @@ def create(a, b):
 
 
 def achar_ciclo(graph, start):
+    g = []
+    control = []
     vertexList, edgeList = graph
     print(graph)
     visitedVertex = []
@@ -61,19 +63,19 @@ def achar_ciclo(graph, start):
             print("Cilco achado")
             visitedVertex.append(current)
             visitedVertex.append(y)
-            g = []
             for i in reversed(visitedVertex):
                 if i not in g:
                     g.append(i)
                 else:
                     g.append(i)
                     break
-            g = g[::-1]
-            return g
+            print("Ciclos: ", g)
+    g = g[::-1]
+    return g
 
 
 edge = (edge_list(grafo))
 arestas = (achar_aresta(grafo))
 grafoo = (create(arestas, edge))
 
-print(achar_ciclo(grafoo, 1))
+print(achar_ciclo(grafoo, 0))
