@@ -72,16 +72,6 @@ def achar_ciclo(graph, start):
             return g
 
 
-def bfs(graph, start):
-    vertexList, edgeList = graph
-    visitedList = []
-    queue = [start]
-    adjacencyList = [[] for vertex in vertexList]
-    for edge in edgeList:
-        adjacencyList[edge[0]].append(edge[1])
-        print(edge)
-        print(adjacencyList)
-
 edge = (edge_list(grafo))
 arestas = (achar_aresta(grafo))
 grafoo = (create(arestas, edge))
