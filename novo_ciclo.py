@@ -212,7 +212,6 @@ class grafos:
                 test = None
             else:
                 test = nova[0]
-            print("Este caralho: ", test)
             for i in color["black"]:
                 if i not in tired and i != test and test is not None:
                     if i not in ender:
