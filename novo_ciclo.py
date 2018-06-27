@@ -176,7 +176,7 @@ class grafos:
 
 
 
-    def DepthFirstSearch(self,source,grafo,function_value):
+    def find_cicle(self,source,grafo,function_value):
         nova = []
         ender = []
         is_here = []
@@ -291,7 +291,7 @@ class grafos:
         for x,y in zip(transposed,transposedmatriz):
             transposed[x] = y[:]
 
-        final1 = self.DepthFirstSearch("0",self.adjMatrix,"3")
+        final1 = self.find_cicle("0",self.adjMatrix,"3")
         SCC = final1
         print("Ciclos encontrados :",SCC)
 
@@ -317,9 +317,5 @@ class grafos:
 if __name__ == '__main__':
     g = grafos()
     g.file_treatment()
-    #print(g.identify_edge(0,"0","1"))
-    #g.find_adj("4",0)
-    #g.addNode(0)
-    #g.DepthFirstSearch("0",g.adjMatrix,"0")
     g.FindConnectivity()
 
